@@ -8,7 +8,7 @@
 <hr>
 <h1>音樂作品</h1>
 <p>作者及改編自作品請點擊影片看詳細資訊, 本站不一一介紹.</p>
-<div class="col-md-12 song">
+<div class="col-md-12 col-sm-12 song">
   <iframe width="1140" height="600" src="//www.youtube.com/embed/rW6W8tehg9I" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-md-12 song">
@@ -36,3 +36,50 @@
   <hr>
   <h2> 作品陸續新增中 !!</h2>
 </div>
+
+<%= content_for :javascripts do %>
+<script type="text/javascript">
+// By Chris Coyier & tweaked by Mathias Bynens
+
+$(function() {
+
+  // Find all YouTube videos
+  var $allVideos = $("iframe[src^='//www.youtube.com']"),
+
+      // The element that is fluid width
+      $fluidEl = $(".song");
+
+  // Figure out and save aspect ratio for each video
+  $allVideos.each(function() {
+
+    $(this)
+      .data('aspectRatio', this.height / this.width)
+      
+      // and remove the hard coded width/height
+      .removeAttr('height')
+      .removeAttr('width');
+
+  });
+
+  // When the window is resized
+  // (You'll probably want to debounce this)
+  $(window).resize(function() {
+
+    var newWidth = $fluidEl.width();
+    
+    // Resize all videos according to their own aspect ratio
+    $allVideos.each(function() {
+
+      var $el = $(this);
+      $el
+        .width(newWidth)
+        .height(newWidth * $el.data('aspectRatio'));
+
+    });
+
+  // Kick off one resize to fix all videos on page load
+  }).resize();
+
+});
+</script>
+<% end %>
