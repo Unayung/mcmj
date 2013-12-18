@@ -1,0 +1,6 @@
+<%= form_tag "/search", :class => "navbar-form navbar-left", :role => "search", :method => :get do %>
+  <div class="form-group">
+    <span class="nav-toolbar-icon nav-toolbar-icon-search"></span>
+    <input type="text" name="q" class="search-query form-control " value="<%= @query_string %>" placeholder="<%= @query_string ||   "Search" %>" />
+  </div>
+<% end %>
