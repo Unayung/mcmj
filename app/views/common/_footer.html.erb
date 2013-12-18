@@ -1,10 +1,5 @@
 <footer class="footer">
-  <%= render_list :class => "nav nav-pills pull-right" do |li|
-      #li << link_to( "Link1", "#")
-      #li << link_to( "Link2", "#")   
-      #li << link_to( "Link3", "#")
-      #li << link_to( "Link4", "#")
-  end %>
-  <p class="copyright">Copyright @2012 <%= Setting.app_name %> All rights reserved.</p>
-
+  <br>
+  <p class="copyright"><%= Setting.app_name %> 為網友創意表現之蒐集, 本站並無任何侵權意圖</p>
+  <p>如需聯絡請 mail 至 <%= mail_to("youngvoice.basement@gmail.com", "youngvoice.basement@gmail.com") %> 謝謝</p>
 </footer>

@@ -27,3 +27,29 @@
 .group {
    zoom: 1; /* IE6&7 */
 }
+
+body {
+  background-color: black;
+  color: #ccc;
+}
+
+nav {
+  background-color: black !important;
+  color: #ccc;
+  a {
+    color: #ccc !important;
+  }
+}
+
+footer {
+  border-top: 1px solid white;
+  color: #ccc;
+  text-align: center;
+}
+
+.song {
+  iframe {
+    border:1px dotted gray;
+    margin: 5px;
+  }
+}

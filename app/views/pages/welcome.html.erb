@@ -1,3 +1,30 @@
-<div class="span12">
-	<h1> Welcome </h1>
+<div class="col-md-12">
+  <h1>MC美江第一波主視覺</h1>
+  <p>作者 <%= link_to("許泰文", "https://www.facebook.com/photo.php?fbid=241069842736316&set=a.107546112755357.12997.100004999051600&type=1&permPage=1", :target => :blank) %></p>
+  <%= link_to("https://www.facebook.com/photo.php?fbid=241069842736316&set=a.107546112755357.12997.100004999051600&type=1&permPage=1", :target => :blank) do %>
+	 <%= image_tag("/welcome.jpg", :width => "100%") %>
+  <% end %>
 </div>
+<hr>
+<h1>音樂作品</h1>
+<p>作者及改編自作品請點擊影片看詳細資訊, 本站不一一介紹.</p>
+<div class="col-md-6 song">
+  <!-- <h1>MC美江《燒燬》跳針宣告（雲霧加長版）</h1> -->
+  <!-- <p>原po上傳後似乎被檢舉了, 這應該是備份 (?</p> -->
+  <iframe width="550" height="300" src="//www.youtube.com/embed/rW6W8tehg9I" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-md-6 song">
+  <!-- <h1>姊姊（燒毀R-E-M-I-X）</h1>
+  <p>作者 <%= link_to("Nail Wu", "http://www.youtube.com/channel/UCZIUa5Weh1k90k0KTC0sm-Q", :target => :blank) %></p> -->
+  <iframe width="550" height="300" src="//www.youtube.com/embed/A2I4wo3FGtg" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-md-6 song">
+  <iframe width="550" height="300" src="//www.youtube.com/embed/f9sdOlXeQJ8" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-md-6 song">
+  <iframe width="550" height="300" src="//www.youtube.com/embed/4Yg_qbucQd8" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-md-6 song">
+  <iframe width="550" height="300" src="//www.youtube.com/embed/0N80MqpteoE" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-md-6 song"></div>
