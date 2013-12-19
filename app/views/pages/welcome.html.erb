@@ -16,33 +16,11 @@
 <hr>
 <h1>音樂作品</h1>
 <p>作者及改編自作品請點擊影片看詳細資訊, 本站不一一介紹.</p>
+<% @videos.each do |video| %>
 <div class="col-md-12 col-sm-12 song">
-  <iframe width="560" height="315" src="//www.youtube.com/embed/pTCW34OZs3A" frameborder="0" allowfullscreen></iframe>
+  <%= video.iframe_code.html_safe %>
 </div>
-<div class="col-md-12 col-sm-12 song">
-  <iframe width="1140" height="600" src="//www.youtube.com/embed/rW6W8tehg9I" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="col-md-12 col-sm-12 song">
-  <iframe width="1140" height="600" src="//www.youtube.com/embed/KZbYdffHIqA" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="col-md-12 col-sm-12 song">
-  <iframe width="1140" height="600" src="//www.youtube.com/embed/A2I4wo3FGtg" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="col-md-12 col-sm-12 song">
-  <iframe width="1140" height="600" src="//www.youtube.com/embed/f9sdOlXeQJ8" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="col-md-12 col-sm-12 song">
-  <iframe width="1140" height="600" src="//www.youtube.com/embed/4Yg_qbucQd8" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="col-md-12 col-sm-12 song">
-  <iframe width="1140" height="600" src="//www.youtube.com/embed/0N80MqpteoE" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="col-md-12 col-sm-12 song">
-  <iframe width="1140" height="600" src="//www.youtube.com/embed/Hu_Z6MMrnks" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="col-md-12 col-sm-12 song">
-  <iframe width="1140" height="600" src="//www.youtube.com/embed/MU7e6F6C9l8" frameborder="0" allowfullscreen></iframe>
-</div>
+<% end %>
 <div class="col-md-12 col-sm-12">
   <hr>
   <h2> 作品陸續新增、募集中 !!</h2>

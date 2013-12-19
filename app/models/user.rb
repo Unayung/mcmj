@@ -30,4 +30,8 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+
+  def admin?
+    Setting.admin_emails.include?(email)
+  end
 end

@@ -1,8 +1,6 @@
 # -*- encoding : utf-8 -*-
 class VideosController < ApplicationController
-  def index
-    @videos = Video.all
-  end
+  before_filter :require_is_admin
 
   def new
     @video = Video.new
