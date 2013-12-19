@@ -2,7 +2,7 @@
 class PagesController < HighVoltage::PagesController
 
   def welcome
-    @videos = Video.all
+    @videos = Video.order(:id).reverse
   end
 
 end
