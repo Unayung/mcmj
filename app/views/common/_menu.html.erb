@@ -13,8 +13,9 @@
       <%# render :partial => "common/search_form" %>
 
       <%= render_list :class => "nav navbar-nav " do |li|
-        li << link_to("影音特區",root_path)
-        li << link_to("各種創作",page_path("link"))
+        li << link_to("影音區",root_path)
+        li << link_to("純音樂",page_path("music"))
+        li << link_to("微文創",page_path("link"))
       end %>
       
       <%# render :partial => "common/user_nav"%>

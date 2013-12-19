@@ -9,4 +9,7 @@ class PagesController < HighVoltage::PagesController
     
   end
 
+  def music
+    
+  end
 end
