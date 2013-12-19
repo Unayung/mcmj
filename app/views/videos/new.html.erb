@@ -1,0 +1,10 @@
+<div class="col-md-12 col-sm-12">
+  <h1>投稿新的音樂錄影帶</h1>
+  <%= simple_form_for @video do |f| %>
+    <%= f.input(:author, :label => "作者") %>
+    <%= f.input(:url, :label => "作者網站") %>
+    <%= f.input(:note, :label => "備註") %>
+    <%= f.input(:iframe_code, :as => :text, :label => "貼上 youtube 的嵌入代碼 <iframe xxxxx></iframe") %>
+    <%= f.submit %>
+  <% end %>
+</div>

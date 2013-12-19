@@ -7,11 +7,12 @@ class VideosController < ApplicationController
   end
 
   def create
-    @video = Video.new(params[:video])
+    @video = Video.new(video_params)
     if @video.save
-      redirect_to videos_path
+      redirect_to root_path, :notice => "Video Saved"
     else
-      redirect_to new_video_path
+      flash[:warning] = "Something went wrong :<"
+      render :new
     end
   end
 
@@ -25,5 +26,11 @@ class VideosController < ApplicationController
 
   def delete
     
+  end
+
+  private
+
+  def video_params
+    params.require(:video).permit(:author, :note, :url, :iframe_code)
   end
 end
