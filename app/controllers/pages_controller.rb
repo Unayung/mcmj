@@ -5,4 +5,8 @@ class PagesController < HighVoltage::PagesController
     @videos = Video.order(:id).reverse
   end
 
+  def link
+    
+  end
+
 end

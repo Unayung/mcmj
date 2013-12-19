@@ -55,9 +55,16 @@ footer {
   }
 }
 
-ul.navbar-nav li {
-  a {
-    color: black !important;
+ul.navbar-nav {
+  li.active {
+    a {
+      color: black !important;
+    }
+  }
+  li {
+    a {
+      color: #ccc !important;
+    }
   }
 }
 
