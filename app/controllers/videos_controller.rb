@@ -9,10 +9,9 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
     if @video.save
-      redirect_to root_path, :notice => "Video Saved"
+      redirect_to root_path
     else
-      flash[:warning] = "Something went wrong :<"
-      render :new
+      redirect_to new_video_path
     end
   end
 
