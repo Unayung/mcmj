@@ -13,4 +13,5 @@
 #
 
 class Video < ActiveRecord::Base
+  validates :iframe_code, presence: true
 end
