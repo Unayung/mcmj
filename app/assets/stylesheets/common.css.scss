@@ -71,3 +71,12 @@ ul.navbar-nav {
 div.navbar-header {
   /*width: 280px;*/
 }
+
+div.comments {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+.fb-comments, .fb-comments * {
+    width:100% !important;
+}
