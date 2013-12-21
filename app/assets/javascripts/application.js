@@ -3,3 +3,4 @@
 //= require jquery_ujs
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/collapse
+//= require jquery-fileupload

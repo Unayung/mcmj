@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module WillPaginate
   module ActionView
     def will_paginate(collection = nil, options = {})

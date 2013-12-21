@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: images
+#
+#  id                :integer          not null, primary key
+#  image_creation_id :integer
+#  image             :string(255)
+#  image_width       :integer
+#  image_height      :integer
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 # This model initially had no columns defined.  If you add columns to the

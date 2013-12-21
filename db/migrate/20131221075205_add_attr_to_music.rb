@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddAttrToMusic < ActiveRecord::Migration
   def change
     add_column :musics, :title, :string

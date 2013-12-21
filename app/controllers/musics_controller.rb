@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class MusicsController < ApplicationController
   before_filter :require_is_admin, :except => :index
 

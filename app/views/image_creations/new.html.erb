@@ -1,0 +1,11 @@
+<div class="col-md-12 col-sm-12">
+  <h1>投稿新的 Image Creation</h1>
+  <%= simple_form_for @image_creation do |f| %>
+    <%= f.input(:title, :label => "標題") %>
+    <%= f.input(:author, :label => "作者") %>
+    <%= f.input(:author_link, :label => "作者連結") %>
+    <%= f.input(:description, :label => "描述") %>
+    <%= f.input(:original_url, :label => "原始網頁") %>
+    <%= f.submit %>
+  <% end %>
+</div>

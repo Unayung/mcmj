@@ -15,7 +15,7 @@
       <%= render_list :class => "nav navbar-nav " do |li|
         li << link_to(fa_icon("youtube-play", :text => "影音區"),root_path)
         li << link_to(fa_icon("music", :text => "純音樂"),musics_path)
-        li << link_to(fa_icon("picture-o", :text => "圖文創作"), page_path("image"))
+        li << link_to(fa_icon("picture-o", :text => "圖文創作"), image_creations_path)
         li << link_to(fa_icon("link", :text => "Links"),links_path)
         li << link_to(fa_icon("comments", :text => "我要說"), page_path("comment"))
       end %>

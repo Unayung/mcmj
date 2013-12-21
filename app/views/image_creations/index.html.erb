@@ -1,0 +1,12 @@
+<div class="col-md-12 col-sm-12">
+  <h1>MC美江圖文創作</h1>
+</div>
+<% @image_creations.each do |image_creation| %>
+<div class="col-md-12 col-sm-12">
+  <h2><%= image_creation.title %></h2>
+  <p><%= render_image_creation_author(image_creation) %></p>
+  <p><%= render_image_creation_description(image_creation) %></p>
+  <p><%= render_image_creation_origin(image_creation) %></p>
+  <%= render_image_creation_images(image_creation) %>
+</div>
+<% end %>
