@@ -6,6 +6,6 @@ Mcmj::Application.routes.draw do
 
   resources :videos
   resources :links
-  resources :images
+  
   resources :musics
 end

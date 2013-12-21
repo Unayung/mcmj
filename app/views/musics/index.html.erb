@@ -3,6 +3,6 @@
 </div>
 <% @musics.each do |music| %>
 <div class="col-md-12 col-sm-12">
-  <h2><%= music.id %>. <%= link_to(music.title, music.url, :target => :blank) %></h2>
+  <h2><%= music.id %>. <%= link_to(music.title, music.url, :target => :blank) %> <%= render_music_author(music) %></h2>
 </div>
 <% end %>

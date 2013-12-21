@@ -11,9 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131221075205) do
+ActiveRecord::Schema.define(version: 20131221113755) do
 
-  create_table "images", force: true do |t|
+  create_table "image_creations", force: true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.string   "description"
+    t.string   "original_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
