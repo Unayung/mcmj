@@ -13,7 +13,7 @@
   <hr>
 </div>
 <div class="col-md-12 col-sm-12 song">
-  <%= will_paginate @videos, renderer: BootstrapPagination::Rails,:previous_label => '<-', :next_label => '->' %>
+  <%= will_paginate @videos, renderer: BootstrapPagination::Rails,:previous_label => fa_icon("arrow-left"), :next_label => fa_icon("arrow-right") %>
 </div>
 <% @videos.each do |video| %>
 <div class="col-md-12 col-sm-12 song">
@@ -21,7 +21,7 @@
 </div>
 <% end %>
 <div class="col-md-12 col-sm-12">
-  <%= will_paginate @videos, renderer: BootstrapPagination::Rails,:previous_label => '<-', :next_label => '->' %>
+  <%= will_paginate @videos, renderer: BootstrapPagination::Rails,:previous_label => fa_icon("arrow-left"), :next_label => fa_icon("arrow-right") %>
 </div>
 <div class="col-md-12 col-sm-12">
   <hr>
