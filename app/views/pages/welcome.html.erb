@@ -12,8 +12,8 @@
   <p>作者及改編自作品請點擊影片看詳細資訊, 本站不一一介紹.</p>
   <hr>
 </div>
-<div class="col-md-12 col-sm-12">
-  <%= will_paginate @videos, renderer: BootstrapPagination::Rails %>
+<div class="col-md-12 col-sm-12 song">
+  <%= will_paginate @videos, renderer: BootstrapPagination::Rails,:previous_label => '<-', :next_label => '->' %>
 </div>
 <% @videos.each do |video| %>
 <div class="col-md-12 col-sm-12 song">
@@ -21,7 +21,7 @@
 </div>
 <% end %>
 <div class="col-md-12 col-sm-12">
-  <%= will_paginate @videos, renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @videos, renderer: BootstrapPagination::Rails,:previous_label => '<-', :next_label => '->' %>
 </div>
 <div class="col-md-12 col-sm-12">
   <hr>
