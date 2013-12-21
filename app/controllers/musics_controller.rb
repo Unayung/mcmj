@@ -1,5 +1,5 @@
 class MusicsController < ApplicationController
-  before_filter :require_is_admin
+  before_filter :require_is_admin, :except => :index
 
   def index
     @musics = Music.all

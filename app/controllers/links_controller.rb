@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_filter :require_is_admin
+  before_filter :require_is_admin, :except => :index
 
   def index
     @links = Link.all
