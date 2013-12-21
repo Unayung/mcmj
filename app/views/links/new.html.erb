@@ -1,0 +1,9 @@
+<div class="col-md-12 col-sm-12">
+  <h1>投稿新的Link</h1>
+  <%= simple_form_for @link do |f| %>
+    <%= f.input(:title, :label => "標題") %>
+    <%= f.input(:url, :label => "URL") %>
+    <%= f.input(:description, :label => "描述") %>
+    <%= f.submit %>
+  <% end %>
+</div>

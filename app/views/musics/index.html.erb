@@ -1,0 +1,8 @@
+<div class="col-md-12 col-sm-12">
+  <h1>MC美江福音(? 創作</h1>
+</div>
+<% @musics.each do |music| %>
+<div class="col-md-12 col-sm-12">
+  <h2><%= music.id %>. <%= link_to(music.title, music.url, :target => :blank) %></h2>
+</div>
+<% end %>

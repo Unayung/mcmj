@@ -1,0 +1,9 @@
+<div class="col-md-12 col-sm-12">
+  <h1>投稿新的Music</h1>
+  <%= simple_form_for @music do |f| %>
+    <%= f.input(:title, :label => "標題") %>
+    <%= f.input(:author, :label => "作者") %>
+    <%= f.input(:url, :label => "URL") %>
+    <%= f.submit %>
+  <% end %>
+</div>
