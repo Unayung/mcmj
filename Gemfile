@@ -33,7 +33,7 @@ gem "settingslogic"
 gem "anjlab-bootstrap-rails", ">= 2.2.2", :require => "bootstrap-rails"
 gem "bootstrap_helper", ">= 4.2.2.1"
 gem "simple_form", "~> 3.0.0.beta1"
-gem "will_paginate", "3.0.3"
+gem 'will_paginate-bootstrap'
 
 gem "high_voltage"
 
