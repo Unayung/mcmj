@@ -1,5 +1,8 @@
 <div class="col-md-12 col-sm-12">
   <h1>MC美江福音(? 創作</h1>
+  <% if current_user.present? && current_user.admin? %>
+  <%= link_to("New", new_music_path, :class => "btn btn-info") %>
+  <% end %>
 </div>
 <% @musics.each do |music| %>
 <div class="col-md-12 col-sm-12">

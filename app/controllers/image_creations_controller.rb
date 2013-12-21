@@ -1,7 +1,7 @@
 class ImageCreationsController < ApplicationController
   before_filter :require_is_admin, :except => :index
   def index
-    @image_creations = ImageCreation.all
+    @image_creations = ImageCreation.order("id DESC")
   end
 
   def new
