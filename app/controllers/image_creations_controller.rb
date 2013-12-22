@@ -1,5 +1,5 @@
 class ImageCreationsController < ApplicationController
-  before_filter :require_is_admin, :except => :index
+  before_filter :require_is_admin, :except => :index, :show
   def index
     @image_creations = ImageCreation.order("id DESC")
   end
