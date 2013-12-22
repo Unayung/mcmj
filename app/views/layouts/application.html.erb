@@ -19,7 +19,7 @@
   <!-- <meta property="fb:app_id" content="<%= Setting.facebook_app_id %>"> -->
   <meta property="fb:admins" content="649064390">
   <meta property="og:url" content="<%= request.original_url %>">
-
+  <link rel="canonical" href="<%= request.original_url %>">
 </head>
 <%= render_body_tag %>
   <%= render :partial => "common/menu" %>

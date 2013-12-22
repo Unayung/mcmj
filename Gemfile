@@ -39,7 +39,6 @@ gem 'will_paginate-bootstrap'
 gem "high_voltage"
 gem "stringex" # for english uri
 gem "airbrake"
-
 gem "rvm-capistrano"
 
 gem "omniauth"
