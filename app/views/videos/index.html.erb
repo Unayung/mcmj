@@ -1,26 +1,21 @@
 <div class="col-md-12 col-sm-12">
-  <h1>斷開系福音 Rap 天后終於姍姍來遲!! 網友熱議，堪稱是唱片界的神蹟!!</h1>
-  <div class="pull-right">
-    <p>- PTT 2013/12/18</p>
-  </div>
-  <br>
+  <h1>MC美江影音專區</h1>
+  <p>作者及改編自作品請點擊影片看詳細資訊, 本站不一一介紹.</p>
   <hr>
+  <% if current_user.present? && current_user.admin? %>
+  <%= link_to("New", new_video_path, :class => "btn btn-info") %>
+  <% end %>
 </div>
-<%# render :partial => "common/changelog" %>
-<div class="col-md-12 col-sm-12">
-  <h1>MC美江本日主打  <small><%= Date.today %></small></h1>
+<div class="col-md-12 col-sm-12 song">
+  <%= will_paginate @videos, renderer: BootstrapPagination::Rails,:previous_label => fa_icon("arrow-left"), :next_label => fa_icon("arrow-right") %>
 </div>
-
 <% @videos.each do |video| %>
 <div class="col-md-12 col-sm-12 song">
-  <h2><%= video.title %></h2>
-  <p>by <%= video.author %></p>
   <%= video.iframe_code.html_safe %>
 </div>
 <% end %>
-
 <div class="col-md-12 col-sm-12">
-  <h2> <%= link_to("我還要看更多影音", videos_path) %> </h2>
+  <%= will_paginate @videos, renderer: BootstrapPagination::Rails,:previous_label => fa_icon("arrow-left"), :next_label => fa_icon("arrow-right") %>
 </div>
 
 <%= content_for :javascripts do %>

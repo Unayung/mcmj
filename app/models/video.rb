@@ -15,4 +15,8 @@
 
 class Video < ActiveRecord::Base
   validates :iframe_code, presence: true
+
+  def self.recommendation_of_today
+    where("recommendation = ?", true).order("id DESC")
+  end
 end

@@ -1,6 +1,10 @@
 # -*- encoding : utf-8 -*-
 class VideosController < ApplicationController
-  before_filter :require_is_admin
+  before_filter :require_is_admin, :except => :index
+
+  def index
+    @videos = Video.paginate(:page => params[:page], :per_page => 10).order("id DESC")
+  end
 
   def new
     @video = Video.new
