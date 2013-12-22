@@ -9,7 +9,8 @@ class ImageCreationsController < ApplicationController
   end
 
   def show
-    @image_creation = ImageCreation.find_by_url(params[:id])
+    # @image_creation = ImageCreation.find_by_url(params[:id])
+    @image_creation = ImageCreation.find(params[:id])
     set_page_title @image_creation.title
     set_page_image @image_creation.images.first.image.url
     if @image_creation.description.present?

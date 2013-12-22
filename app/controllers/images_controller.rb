@@ -47,6 +47,7 @@ class ImagesController < ApplicationController
   protected
 
   def find_image_creation
-    @image_creation = ImageCreation.find_by_url(params[:image_creation_id])
+    # @image_creation = ImageCreation.find_by_url(params[:image_creation_id])
+    @image_creation = ImageCreation.find(params[:image_creation_id])
   end
 end
