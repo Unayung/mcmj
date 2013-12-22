@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> 
+<html lang="zh-tw"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"> 
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <%= render_page_title_tag %>
   <%= render_page_description_meta_tag %>
   <%= render_page_keywords_meta_tag %>
   <%= render_page_image_link_tag %>
   <%= csrf_meta_tag %>
-
+  <meta name="robots" content="INDEX,FOLLOW">
   <%= stylesheet_link_tag "application" %>
   
   <%= yield :stylesheets %>
