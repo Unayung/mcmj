@@ -37,7 +37,7 @@ gem "simple_form", "~> 3.0.0.beta1"
 gem 'will_paginate-bootstrap'
 
 gem "high_voltage"
-
+gem "stringex" # for english uri
 gem "airbrake"
 
 gem "rvm-capistrano"

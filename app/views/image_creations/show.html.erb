@@ -1,0 +1,10 @@
+<div class="col-md-12 col-sm-12">
+  <h1><%= link_to("MC美江圖文創作", image_creations_path) %></h1>
+</div>
+<div class="col-md-12 col-sm-12">
+  <h2><%= @image_creation.title %></h2>
+  <p><%= render_image_creation_author(@image_creation) %></p>
+  <p><%= render_image_creation_description(@image_creation) %></p>
+  <p><%= render_image_creation_origin(@image_creation) %></p>
+  <%= render_image_creation_images(@image_creation) %>
+</div>

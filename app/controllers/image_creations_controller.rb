@@ -8,6 +8,15 @@ class ImageCreationsController < ApplicationController
     @image_creation = ImageCreation.new
   end
 
+  def show
+    @image_creation = ImageCreation.find_by_url(params[:id])
+    set_page_title @image_creation.title
+    set_page_image @image_creation.images.first.image.path
+    if @image_creation.description.present?
+      set_page_description @image_creation.description
+    end
+  end
+
   def create
     @image_creation = ImageCreation.new(image_creation_params)
 

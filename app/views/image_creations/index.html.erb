@@ -6,10 +6,11 @@
 </div>
 <% @image_creations.each do |image_creation| %>
 <div class="col-md-12 col-sm-12">
-  <h2><%= image_creation.title %></h2>
+  <h2><%= link_to(image_creation.title, image_creation_path(image_creation)) %></h2>
   <p><%= render_image_creation_author(image_creation) %></p>
   <p><%= render_image_creation_description(image_creation) %></p>
   <p><%= render_image_creation_origin(image_creation) %></p>
-  <%= render_image_creation_images(image_creation) %>
+  <%= render_image_creation_first_image(image_creation) %>
+  <h2><%= link_to("Read more ...", image_creation_path(image_creation)) %></h2>
 </div>
 <% end %>

@@ -22,6 +22,10 @@ module ImageCreationsHelper
     end
   end
 
+  def render_image_creation_first_image(image_creation)
+    image_tag(image_creation.images.first.image.url, :width => "100%", :class => "image-creation-images")
+  end
+
   def render_image_creation_images(image_creation)
     s = ""
     if image_creation.images.present?
