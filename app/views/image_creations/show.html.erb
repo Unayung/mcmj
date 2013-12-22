@@ -6,5 +6,6 @@
   <p><%= render_image_creation_author(@image_creation) %></p>
   <p><%= render_image_creation_description(@image_creation) %></p>
   <p><%= render_image_creation_origin(@image_creation) %></p>
+  <p>給點牡蠣<%=  fb_like(request.original_url) %></p>
   <%= render_image_creation_images(@image_creation) %>
 </div>
