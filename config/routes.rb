@@ -8,7 +8,7 @@ Mcmj::Application.routes.draw do
   resources :links
   resources :musics
   
-  resources :image_creations do
+  resources :image_creations , :path => "icreations" do
     resources :images
   end
 end
