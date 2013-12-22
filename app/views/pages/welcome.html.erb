@@ -14,7 +14,7 @@
 <% @videos.each do |video| %>
 <div class="col-md-12 col-sm-12 song">
   <h2><%= video.title %></h2>
-  <p>by <%= video.author %></p>
+  <p><%= render_video_author_link(video) %></p>
   <%= video.iframe_code.html_safe %>
 </div>
 <% end %>
