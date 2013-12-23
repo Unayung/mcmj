@@ -29,7 +29,7 @@ module ImageCreationsHelper
   def render_image_creation_images(image_creation)
     s = ""
     if image_creation.images.present?
-      width = 100 / image_creation.images.size
+      width = 98 / image_creation.images.size
       image_creation.images.each do |image|
         s += image_tag(image.image.url, :width => "#{width}%", :class => "image-creation-images")
       end
