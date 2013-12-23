@@ -39,7 +39,7 @@ class VideosController < ApplicationController
   private
 
   def video_params
-    params.require(:video).permit(:author, :note, :url, :iframe_code)
+    params.require(:video).permit(:author, :note, :url, :iframe_code, :title, :recommendation)
   end
 
 end
