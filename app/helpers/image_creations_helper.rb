@@ -36,9 +36,9 @@ module ImageCreationsHelper
         end
       else
         image_creation.images.each_with_index do |image, i|
-          if i % 3 == 0
+          if i % 3 == 2
             s += image_tag(image.image.url, :width => "32%", :class => "image-creation-images")
-            s += "<br>"
+            s += "<br><hr>"
           else
             s += image_tag(image.image.url, :width => "32%", :class => "image-creation-images")
           end
