@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :search_object
 
   def login_required
     if current_user.blank?
@@ -26,4 +27,9 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  protected
+
+  def search_object
+    @search = Video.ransack(params[:q])
+  end
 end

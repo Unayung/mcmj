@@ -3,7 +3,12 @@ class VideosController < ApplicationController
   before_filter :require_is_admin, :except => :index
 
   def index
-    @videos = Video.paginate(:page => params[:page], :per_page => 10).order("id DESC")
+    if params[:q].present?
+      @query_string = params[:q][:title_cont]
+      @videos = @search.result.paginate(:per_page => 10, :page => params[:page])
+    else
+      @videos = Video.paginate(:page => params[:page], :per_page => 10).order("id DESC")
+    end
   end
 
   def new
@@ -36,4 +41,5 @@ class VideosController < ApplicationController
   def video_params
     params.require(:video).permit(:author, :note, :url, :iframe_code)
   end
+
 end

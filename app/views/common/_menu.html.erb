@@ -10,7 +10,7 @@
   </div>
   
   <nav class="collapse navbar-collapse navbar-ex1-collapse">
-      <%# render :partial => "common/search_form" %>
+      <%= render :partial => "common/search_form" %>
 
       <%= render_list :class => "nav navbar-nav " do |li|
         li << link_to(fa_icon("youtube-play", :text => "影音區"),videos_path)

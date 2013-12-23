@@ -45,7 +45,7 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "auto-facebook", "0.4"
 
-
+gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
 gem "hipchat"
 
 # Cache
