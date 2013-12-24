@@ -23,27 +23,15 @@ module ImageCreationsHelper
   end
 
   def render_image_creation_first_image(image_creation)
-    image_tag(image_creation.images.first.image.url, :width => "100%", :class => "image-creation-images")
+    image_tag(image_creation.images.first.image.medium.url, :class => "image-creation-images")
   end
 
   def render_image_creation_images(image_creation)
     s = ""
     if image_creation.images.present?
-      if image_creation.images.count < 4
-        width = 98 / image_creation.images.size
-        image_creation.images.each do |image|
-          s += image_tag(image.image.url, :width => "#{width}%", :class => "image-creation-images")
-        end
-      else
-        image_creation.images.each_with_index do |image, i|
-          if i % 3 == 2
-            s += image_tag(image.image.url, :width => "32%", :class => "image-creation-images")
-            s += "<br><hr>"
-          else
-            s += image_tag(image.image.url, :width => "32%", :class => "image-creation-images")
-          end
-        end
-      end
+      image_creation.images.each_with_index do |image, i|
+        s += image_tag(image.image.url, :width => image.image_width, :class => "image-creation-images")
+      end  
     end
 
     return s.html_safe

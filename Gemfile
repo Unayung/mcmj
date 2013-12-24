@@ -24,6 +24,7 @@ gem "jquery-fileupload-rails"
 gem 'devise', '3.0.2'
 gem "seo_helper", "~> 1.0.2"
 gem "open_graph_helper"
+gem 'masonry-rails'
 
 gem "rmagick"
 gem "carrierwave"

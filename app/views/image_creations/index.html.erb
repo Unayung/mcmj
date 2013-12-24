@@ -4,14 +4,28 @@
   <%= link_to("New", new_image_creation_path, :class => "btn btn-info") %>
   <% end %>
 </div>
-<% @image_creations.each do |image_creation| %>
 <div class="col-md-12 col-sm-12">
-  <h2><%= link_to(image_creation.title, image_creation_path(image_creation)) %></h2>
-  <p><%= render_image_creation_author(image_creation) %></p>
-  <p><%= render_image_creation_description(image_creation) %></p>
-  <p><%= render_image_creation_origin(image_creation) %></p>
-  <%= render_image_creation_first_image(image_creation) %>
-  <h2><%= link_to("Read more ...", image_creation_path(image_creation)) %></h2>
-  <hr>
+  <div id="masonry-container" class="transitions-enabled">
+    <% @image_creations.each do |image_creation| %>
+    <div class="col-md-12 col-sm-12 box">
+      <%= render_image_creation_first_image(image_creation) %>
+      <h2><%= link_to(image_creation.title, image_creation_path(image_creation)) %></h2>
+      <p><%= render_image_creation_author(image_creation) %></p>
+      <p><%= render_image_creation_description(image_creation) %></p>
+      <p><%= render_image_creation_origin(image_creation) %></p>
+      <h2><%= link_to("Read more ...", image_creation_path(image_creation)) %></h2>
+    </div>
+    <% end %>
+  </div>
 </div>
+<%= content_for :javascripts do %>
+<script type="text/javascript">
+  $(function(){
+    $('#masonry-container').masonry({
+      itemSelector: '.box',
+      columnWidth: 0
+    });
+
+  });
+</script>
 <% end %>
