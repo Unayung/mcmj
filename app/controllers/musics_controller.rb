@@ -13,7 +13,7 @@ class MusicsController < ApplicationController
   def create
     @music = Music.new(music_params)
     if @music.save
-      redirect_to root_path
+      redirect_to root_path, :notice => "音樂已新增"
     else
       redirect_to new_music_path
     end

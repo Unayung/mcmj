@@ -21,7 +21,7 @@ class ImageCreationsController < ApplicationController
     @image_creation = ImageCreation.new(image_creation_params)
 
     if @image_creation.save
-      redirect_to new_image_creation_image_path(@image_creation)
+      redirect_to new_image_creation_image_path(@image_creation), :notice => "圖文創作已新增"
     else
       redirect_to new_image_creation_path
     end

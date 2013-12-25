@@ -18,7 +18,7 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
     if @video.save
-      redirect_to root_path
+      redirect_to new_video_path, :notice => "影音已新增"
     else
       redirect_to new_video_path
     end
