@@ -11,6 +11,9 @@
 </div>
 <% @videos.each do |video| %>
 <div class="col-md-12 col-sm-12 song">
+  <% if current_user.present? && current_user.admin? %>
+  <%= link_to("EDIT", edit_video_path(video), :target => :blank, :class => "btn btn-warning") %>
+  <% end %>
   <%= video.iframe_code.html_safe %>
 </div>
 <% end %>

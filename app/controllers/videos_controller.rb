@@ -25,11 +25,16 @@ class VideosController < ApplicationController
   end
 
   def edit
-    
+    @video = Video.find(params[:id])
   end
 
   def update
-    
+    @video = Video.find(params[:id])
+    if @video.update_attributes(video_params)
+      redirect_to edit_video_path(@video), :notice => "影音已修改"
+    else
+      render :action => "edit"
+    end
   end
 
   def delete
