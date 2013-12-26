@@ -3,7 +3,7 @@ class LinksController < ApplicationController
   before_filter :require_is_admin, :except => :index
 
   def index
-    @links = Link.all
+    @links = Link.all.order("id DESC")
   end
 
   def new

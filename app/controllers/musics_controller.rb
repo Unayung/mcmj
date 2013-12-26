@@ -3,7 +3,7 @@ class MusicsController < ApplicationController
   before_filter :require_is_admin, :except => :index
 
   def index
-    @musics = Music.all
+    @musics = Music.all.order("id DESC")
   end
 
   def new
