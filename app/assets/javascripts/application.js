@@ -5,3 +5,4 @@
 //= require twitter/bootstrap/collapse
 //= require jquery-fileupload
 //= require masonry/jquery.masonry
+//= require masonry/jquery.imagesloaded.min

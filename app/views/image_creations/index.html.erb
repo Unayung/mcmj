@@ -21,10 +21,13 @@
 <%= content_for :javascripts do %>
 <script type="text/javascript">
   $(function(){
-    $('#masonry-container').masonry({
-      itemSelector: '.box',
-      columnWidth: 0
-    });
+    var $container = $('#masonry-container');
+    $container.imagesLoaded(function(){
+      $container.masonry({
+        itemSelector: '.box',
+        columnWidth: 0
+      })
+    })
 
   });
 </script>
