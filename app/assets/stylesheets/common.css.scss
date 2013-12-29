@@ -2,6 +2,18 @@
 @import "twitter/bootstrap";
 @import "bootstrap-override";
 
+body {
+  &:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: black;
+    display: block;
+    position: absolute;
+    top: 100px;
+  }
+}
+
 .social{
    float:left;
    width: 110px;
