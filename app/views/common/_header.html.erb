@@ -1,7 +1,7 @@
 <div class="mc-header"><header>
   <hgroup>
-    <h1 class="brand">
-      <%= link_to("MCMJ", Setting.domain, :class => "brand") %>
+    <h1 class="mc-brand">
+      <%= link_to("MCMJ", Setting.domain) %>
     </h1>
     <h2 class="hide">MC美江官方網站</h2>
   </hgroup>
@@ -9,7 +9,7 @@
   <nav>
     <%= render_list :class => "mc-navbar" do |li|
       li << link_to("Biography 美江檔案", page_path("biography"))
-      li << link_to("Music 美江音樂", musics_path)
+      li << link_to("Music 美江美音", musics_path)
       li << link_to("Gallery 美江藝廊", image_creations_path)
       li << link_to("Links 美江魂結", links_path)
       li << link_to("Board 美江留言", page_path("comment"))
