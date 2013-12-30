@@ -30,12 +30,14 @@
       background-position-y: 1px;
       text-indent: -9999px;
       display: block;
-      transition: background-position-y 100ms;
+      transition: opacity 100ms;
       opacity: .7;
 
+      /*
       &:hover {
         background-position-y: -26px;
       }
+      */
     }
     a:hover, &.active a {
       opacity: 1;
