@@ -1,3 +1,5 @@
+@import "compass/css3/transition";
+
 .mj-header {
   padding: 30px 0 20px;
   margin-bottom: 20px;
@@ -30,8 +32,8 @@
       background-position-y: 1px;
       text-indent: -9999px;
       display: block;
-      transition: opacity 100ms;
       opacity: .7;
+      @include transition( opacity 100ms );
 
       /*
       &:hover {
