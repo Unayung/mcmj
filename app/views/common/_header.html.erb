@@ -1,13 +1,13 @@
-<div class="group mc-header"><header>
+<div class="group mj-header"><header>
   <hgroup>
-    <h1 class="mc-brand">
+    <h1 class="mj-brand">
       <%= link_to("MCMJ", Setting.domain) %>
     </h1>
     <h2 class="hide">MC美江官方網站</h2>
   </hgroup>
 
   <nav>
-    <%= render_list :class => "mc-navbar" do |li|
+    <%= render_list :class => "mj-navbar" do |li|
       li << link_to("Biography 美江檔案", page_path("biography"), :class => "menu-bio")
       li << link_to("Music 美江美音", musics_path, :class => "menu-music")
       li << link_to("Gallery 美江藝廊", image_creations_path, :class => "menu-gallery")
