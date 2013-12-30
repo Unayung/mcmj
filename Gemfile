@@ -52,9 +52,7 @@ gem "hipchat"
 # Cache
 gem "dalli"
 
-group :assets do
-  gem "compass-rails", :git => "git@github.com:Compass/compass-rails.git", :branch => "rails4"
-end
+gem "compass-rails", "~> 1.1.3"
 
 group :development do
   gem "capistrano"
