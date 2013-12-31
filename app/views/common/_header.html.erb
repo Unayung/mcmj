@@ -9,6 +9,7 @@
   <nav>
     <%= render_list :class => "mj-navbar" do |li|
       li << link_to("Biography 美江檔案", page_path("biography"), :class => "menu-bio")
+      li << link_to("Video 美江影城", videos_path, :class => "menu-video")
       li << link_to("Music 美江美音", musics_path, :class => "menu-music")
       li << link_to("Gallery 美江藝廊", image_creations_path, :class => "menu-gallery")
       li << link_to("Links 美江魂結", links_path, :class => "menu-links")
