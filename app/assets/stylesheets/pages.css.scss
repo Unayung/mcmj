@@ -1,0 +1,39 @@
+.page-biography {
+  .mj-biography-image {
+    margin: 0 auto 20px;
+  }
+  .mj-biography-list {
+    font-size: 16px;
+
+    dt, dd {
+      margin-bottom: 5px;
+    }
+    dt {
+      width: 6em;
+      float: left;
+      clear: left;
+      text-align: right;
+    }
+    dd {
+      margin-left: 7.5em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    text-align: center;
+
+    .mj-biography-list {
+      text-align: left;
+      display: inline-block;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .mj-biography-list {
+      font-size: 15px;
+
+      dt { width: 5em; }
+      dd { margin-left: 6em; }
+    }
+  }
+}
