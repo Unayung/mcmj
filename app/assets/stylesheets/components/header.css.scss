@@ -1,3 +1,4 @@
+@import "mixins";
 @import "compass/css3/transition";
 @import "compass/css3/background-size";
 
@@ -12,6 +13,11 @@
   text-indent: -9999px;
   margin: 1px 0 -4px;
   float: left;
+
+  @include background-size(cover);
+  @include media-retina {
+    background-image: image-url("images/img_brand_2x.png");
+  }
 
   &, a { display: block; }
   a { height: 100%; }
@@ -33,7 +39,12 @@
       text-indent: -9999px;
       display: block;
       opacity: .7;
+
       @include transition( opacity 100ms );
+      @include background-size(486px);
+      @include media-retina {
+        background-image: image-url("images/img_navbar_2x.png");
+      }
 
       /*
       &:hover {
@@ -100,6 +111,5 @@
   .mj-brand {
     width: 291px * 0.85;
     height: 73px * 0.85;
-    @include background-size(cover);
   }
 }
