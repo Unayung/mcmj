@@ -2,7 +2,7 @@
 <html lang="zh-tw"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="http://www.facebook.com/2008/fbml"> 
+      xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -13,7 +13,7 @@
   <%= csrf_meta_tag %>
   <meta name="robots" content="INDEX,FOLLOW">
   <%= stylesheet_link_tag "application" %>
-  
+
   <%= yield :stylesheets %>
 
   <meta property="og:title"       content="<%= page_title ||  SeoHelper.configuration.site_name %>"/>
@@ -26,19 +26,20 @@
   <link rel="canonical" href="<%= request.original_url %>">
 </head>
 <%= render_body_tag %>
-  <%= render :partial => "common/menu" %>
   <div class="container">
+    <%= render :partial => "common/header" %>
+
     <%= notice_message %>
 
     <div class="content">
       <div class="row">
         <%= yield %>
         <%= yield (:sidebar) %>
-      </div>   
+      </div>
     </div>
   </div>
-  <%= render :partial => "common/footer" %>  
-  <%= render :partial => "common/bootstrap_modal" %>    
+  <%= render :partial => "common/footer" %>
+  <%= render :partial => "common/bootstrap_modal" %>
   <%= render :partial => "common/facebook_js" %>
   <%= render :partial => "common/google_analytics" %>
   <%= javascript_include_tag "application" %>
