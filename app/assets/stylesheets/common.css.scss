@@ -28,6 +28,25 @@
    zoom: 1; /* IE6&7 */
 }
 
+.search-query {
+  display: inline-block;
+  position: relative;
+
+  .search-icon {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+  }
+
+  input[type=search] {
+    width: 200px;
+    height: 30px;
+    padding-left: 30px;
+    padding-right: 10px;
+    border-radius: 20px;
+  }
+}
+
 
 footer {
   margin-top: 40px;
