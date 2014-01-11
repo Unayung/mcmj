@@ -22,6 +22,16 @@
   &, a { display: block; }
   a { height: 100%; }
 }
+
+.mj-header-search {
+  text-align: right;
+
+  .fb-like {
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+}
+
 .mj-navbar {
   list-style: none;
   margin: 52px -10px -2px 0;

@@ -1,6 +1,8 @@
 <% if @search %>
   <%= search_form_for @search, :url => videos_path, :class => "mj-header-search", :method => :get, :role => "search" do |f|%>
 
+    <%=  fb_like(Setting.domain) %>
+
     <span class="search-query">
       <%= fa_icon :search, :class => "search-icon" %>
       <%= search_field_tag("q[title_cont]", @query_string, :placeholder => "搜尋美江影音 (ex. 燒毀)") %>
