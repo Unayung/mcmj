@@ -1,8 +1,10 @@
 <% if @search %>
-  <%= search_form_for @search, :url => videos_path, :class => "navbar-form navbar-left", :method => :get, :role => "search" do |f|%>
-    <div class="form-group">
-      <span class="nav-toolbar-icon nav-toolbar-icon-search"></span>
-      <input type="text" name="q[title_cont]" class="search-query form-control " value="<%= @query_string %>" placeholder="<%= @query_string ||   "ex. 燒毀" %>" />
-    </div>
+  <%= search_form_for @search, :url => videos_path, :class => "mj-header-search", :method => :get, :role => "search" do |f|%>
+
+    <span class="search-query">
+      <%= fa_icon :search, :class => "search-icon" %>
+      <%= search_field_tag("q[title_cont]", @query_string, :placeholder => "搜尋美江影音 (ex. 燒毀)") %>
+    </span>
+
   <% end %>
 <% end %>

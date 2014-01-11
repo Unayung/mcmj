@@ -6,6 +6,8 @@
     <h2 class="hide">MC美江官方網站</h2>
   </hgroup>
 
+  <%= render :partial => "common/search_form" %>
+
   <nav>
     <%= render_list :class => "mj-navbar" do |li|
       li << link_to("Biography 美江檔案", page_path("biography"), :class => "menu-bio")
