@@ -13,6 +13,7 @@
   background-size: cover;
   padding: 45px relative(50px, 940px);
   position: relative;
+  margin-bottom: 15px;
 
   img {
     max-width: 100%;
@@ -59,11 +60,11 @@
 }
 
 .mj-hero-videos {
-  margin-top: 45px;
+  margin-top: 30px;
   .video { margin-bottom: 45px; }
 
   @media (max-width: 639px) {
-    margin-top: 30px;
+    margin-top: 15px;
     .video {
       width: auto;
       max-width: 340px;

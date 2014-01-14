@@ -10,6 +10,10 @@
   </div>
 </div>
 
+<div class="col-xs-12 visible-xs">
+  <h2>本日主打  <small><%= Date.today %></small></h2>
+</div>
+
 <div class="clearfix mj-hero-videos">
   <div class="col-xs-6 col-md-4 video">
     <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/GdwiJ2BCxlQ?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -22,19 +26,7 @@
   </div>
 </div>
 
-
-<div class="col-md-12 col-sm-12">
-  <h1>斷開系福音 Rap 天后終於姍姍來遲!! 網友熱議，堪稱是唱片界的神蹟!!</h1>
-  <div class="pull-right">
-    <p>- PTT 2013/12/18</p>
-  </div>
-  <br>
-  <hr>
-</div>
 <%# render :partial => "common/changelog" %>
-<div class="col-md-12 col-sm-12">
-  <h1>本日主打  <small><%= Date.today %></small></h1>
-</div>
 
 <% @videos.each do |video| %>
 <div class="col-md-12 col-sm-12 song">
