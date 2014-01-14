@@ -15,29 +15,22 @@
 </div>
 
 <div class="clearfix mj-hero-videos">
-  <div class="col-xs-6 col-md-4 video">
-    <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/GdwiJ2BCxlQ?rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <div class="col-xs-6 col-md-4 video">
-    <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/GdwiJ2BCxlQ?rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <div class="col-xs-6 col-md-4 video">
-    <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/GdwiJ2BCxlQ?rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
+  <% @videos.each do |video| %>
+    <div class="col-xs-6 col-md-4 video">
+      <%= video.iframe_code.html_safe %>
+
+      <p class="text-center">
+        <%= render_video_author_link(video) %>
+
+        <% if current_user.present? && current_user.admin? %>
+          <%= link_to("EDIT", edit_video_path(video), :target => :blank, :class => "btn btn-xs btn-warning") %>
+        <% end %>
+      </p>
+    </div>
+  <% end %>
 </div>
 
 <%# render :partial => "common/changelog" %>
-
-<% @videos.each do |video| %>
-<div class="col-md-12 col-sm-12 song">
-  <h2><%= video.title %></h2>
-  <% if current_user.present? && current_user.admin? %>
-  <%= link_to("EDIT", edit_video_path(video), :target => :blank, :class => "btn btn-warning") %>
-  <% end %>
-  <p><%= render_video_author_link(video) %></p>
-  <%= video.iframe_code.html_safe %>
-</div>
-<% end %>
 
 <div class="col-md-12 col-sm-12">
   <h2> <%= link_to("我還要看更多影音", videos_path) %> </h2>
