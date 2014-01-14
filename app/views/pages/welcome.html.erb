@@ -4,7 +4,7 @@
   </div>
   <div class="column right-column">
     <div class="youtube">
-      <%= fa_icon "youtube-play" %>
+      <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/GdwiJ2BCxlQ?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
     <%= image_tag("/images/hero_0111/img_cds.png", :class => "hero-cds", :alt => "《斷他魂結》將推出 CD+Blu-ray 及 CD only 兩種版本") %>
   </div>
@@ -43,7 +43,7 @@
 <script type="text/javascript">
 (function() {
   var resizeVideo = function(event) {
-    var $videos = $(".youtube, iframe[src^='//www.youtube.com']");
+    var $videos = $("iframe[src^='//www.youtube']");
 
     $videos.each(function(index,video) {
       $(video).height($(video).width() * 9 / 16);
