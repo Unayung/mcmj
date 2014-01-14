@@ -12,6 +12,10 @@
     max-width: 100%;
   }
 
+  iframe {
+    max-width: 100%;
+  }
+
   .column {
     width: relative(340px);
     margin: 0 relative(40px);
@@ -33,14 +37,6 @@
     @media (min-width: 768px)  { bottom: 24px; }
     @media (min-width: 992px)  { bottom: 18px; }
     @media (min-width: 1200px) { bottom: 12px; }
-  }
-
-  .youtube {
-    width: 100%;
-    background: #111;
-    color: darken(red, 5%);
-    font-size: 100px;
-    text-align: center;
   }
 
   @media (max-width: 639px) {
