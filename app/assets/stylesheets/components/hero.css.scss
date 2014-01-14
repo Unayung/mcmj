@@ -1,0 +1,61 @@
+@function relative($length, $base: 840px) {
+  @return percentage($length / $base);
+}
+
+.mj-hero#hero-0111 {
+  background: url('/images/hero_0111/img_bkg.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 45px relative(50px, 940px);
+  position: relative;
+
+  img {
+    max-width: 100%;
+  }
+
+  .column {
+    width: relative(340px);
+    margin: 0 relative(40px);
+    float: left;
+  }
+
+  .hero-title {
+    // 344x412
+    margin: -1px auto;
+  }
+  .hero-cds {
+    // 322x194 = 344x207
+
+    @media (min-width: 640px)  {
+      width: relative(340px, 940px);
+      position: absolute;
+      bottom: 5.2%; //not 9.2% you know~
+    }
+    @media (min-width: 768px)  { bottom: 24px; }
+    @media (min-width: 992px)  { bottom: 18px; }
+    @media (min-width: 1200px) { bottom: 12px; }
+  }
+
+  .youtube {
+    width: 100%;
+    background: #111;
+    color: darken(red, 5%);
+    font-size: 100px;
+    text-align: center;
+  }
+
+  @media (max-width: 639px) {
+    $vertical-padding: 30px;
+
+    padding: $vertical-padding 20px 0;
+
+    .column {
+      width: auto;
+      max-width: 340px;
+      margin: 0 auto;
+      float: none;
+    }
+    .left-column, .youtube {
+      margin-bottom: $vertical-padding;
+    }
+  }
+}
