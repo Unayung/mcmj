@@ -2,6 +2,12 @@
   @return percentage($length / $base);
 }
 
+.mj-hero, .mj-hero-videos {
+  iframe {
+    max-width: 100%;
+  }
+}
+
 .mj-hero#hero-0111 {
   background: url('/images/hero_0111/img_bkg.jpg') no-repeat center center;
   background-size: cover;
@@ -9,10 +15,6 @@
   position: relative;
 
   img {
-    max-width: 100%;
-  }
-
-  iframe {
     max-width: 100%;
   }
 
@@ -52,6 +54,21 @@
     }
     .left-column, .youtube {
       margin-bottom: $vertical-padding;
+    }
+  }
+}
+
+.mj-hero-videos {
+  margin-top: 45px;
+  .video { margin-bottom: 45px; }
+
+  @media (max-width: 639px) {
+    margin-top: 30px;
+    .video {
+      width: auto;
+      max-width: 340px;
+      margin: 0 auto 30px;
+      float: none;
     }
   }
 }
